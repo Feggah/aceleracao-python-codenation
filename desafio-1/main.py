@@ -29,7 +29,7 @@ def classify_by_phone_number(records):
         result = apply_price_on_bills(dic, clients_bill)
         if type(result) == dict:
             clients_bill.append(result)
-
+    
     return sorted(clients_bill, key=itemgetter('total'), reverse=True)
 
 
@@ -51,19 +51,16 @@ def apply_price_on_bills(dic, arr):
 
     price = calculate_prices(dic, call_day_seconds_end, call_day_seconds_start)
 
-    if(len(arr) > 0):
-        for i in range(len(arr)):
-            if dic['source'] == arr[i]['source']:
-                return add_to_a_existing_dict(dic, price, i, arr)
-        return create_new_dict(dic, price)
-    else:
-        return create_new_dict(dic, price)
+    for i in range(len(arr)):
+        if dic['source'] == arr[i]['source']:
+            return add_to_a_existing_dict(dic, price, i, arr)
+    return create_new_dict(dic, price)
 
 
 def add_to_a_existing_dict(dic, price, i, arr):
     arr[i]['total'] = round(arr[i]['total'] + price, 2)
 
-    return 0
+    return
 
 
 def create_new_dict(dic, price):
