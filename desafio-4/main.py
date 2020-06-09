@@ -7,6 +7,6 @@ def create_token(data, secret):
 
 def verify_signature(token):
     try:
-        return decode(token, 'acelera', verify=True, algorithms='HS256')
+        return decode(token, 'acelera', algorithms='HS256')
     except InvalidSignatureError:
         return {"error": 2}
