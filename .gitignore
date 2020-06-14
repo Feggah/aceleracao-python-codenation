@@ -1,0 +1,6 @@
+venv
+*.sqlite3
+.vscode
+output.xml
+requirements.txt
+stdout.txt
