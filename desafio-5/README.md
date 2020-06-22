@@ -6,7 +6,7 @@ Ele contém os campos e métodos essenciais para manipular os dados que você es
 
 Com base no desenho abaixo, modele esse relacionamento com os *models* do Django.
 
-![](/challenge.png?raw=true "Imagem")
+![](challenge.png?raw=true "Imagem")
 
     Obs:
     Os campos que dever ser validados:
