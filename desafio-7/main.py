@@ -9,7 +9,7 @@ def get_active_users() -> User:
     return User.objects.filter(last_login__range=(start_date, end_date))
 
 
-def get_amount_users() -> User:
+def get_amount_users() -> int:
     """Retorne a quantidade total de usuarios do sistema """
     return User.objects.count()
 
