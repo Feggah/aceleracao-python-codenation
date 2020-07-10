@@ -46,7 +46,7 @@ Declare os types no mesmo arquivo, Ex:
        /users
        /users/{id}
 
-![](challenge.png?raw=true "Imagem")
+![](Challenge.png?raw=true "Imagem")
 ## Tópicos
 
 Neste desafio você vai aprender:
